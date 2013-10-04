@@ -1,13 +1,13 @@
 def main():
-    print factorial(5)
-    print multiply_list([3, 2, 5])
-    print count_list([])
-    print sum_list([1,2,3])
-    print fibonacci(7)
-    print reverse([1, 2, 3])
-    print find([4,5,6], 4)
-    print palindrome("toyaot")
-    print fold_paper(30, 60, 6)
+    # print factorial(5)
+    # print multiply_list([3, 2, 5])
+    # print count_list([])
+    # print sum_list([1,2,3])
+    # print fibonacci(7)
+    # print reverse([1, 2, 3])
+    # print find([4,5,6], 7)
+    # print palindrome("tq")
+    # print fold_paper(30, 60, 6)
     print count_up(50,30)
     
 # Multiply all the elements in a list
@@ -53,11 +53,13 @@ def fibonacci(n):
 
 # Finds the item i in the list l.... RECURSIVELY
 def find(l, i):
-    if l[0] != i:
-        return "Not in list!"
-    else:
+    if len(l) < 1:
+        return False
+    if l[0] == i:
         return True
-    return find(l[1:], i)
+    else:
+        l = l[1:]
+    return find(l, i)
 
 # Determines if a string is a palindrome
 def palindrome(some_string):
